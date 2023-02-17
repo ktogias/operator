@@ -10,7 +10,6 @@ require (
 	github.com/gorilla/mux v1.8.0
 	github.com/hashicorp/go-version v1.6.0
 	github.com/miekg/dns v1.1.50
-	github.com/minio/cli v1.24.2
 	github.com/minio/madmin-go v1.7.5
 	github.com/minio/mc v0.0.0-20221224152138-176072dee43d
 	github.com/minio/minio-go/v7 v7.0.45
@@ -100,6 +99,7 @@ require (
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/mattn/go-localereader v0.0.1 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect
+	github.com/minio/cli v1.24.2 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.2 // indirect
 	github.com/minio/colorjson v1.0.4 // indirect
 	github.com/minio/filepath v1.0.0 // indirect
