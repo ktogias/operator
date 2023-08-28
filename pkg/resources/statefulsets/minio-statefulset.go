@@ -345,15 +345,17 @@ func poolTopologySpreadConstraints(z *miniov2.Pool) []corev1.TopologySpreadConst
 
 // Builds the security context for a Pool
 func poolSecurityContext(pool *miniov2.Pool, status *miniov2.PoolStatus) *v1.PodSecurityContext {
+	var allowPrivilegeEscalation = false
 	var runAsNonRoot = true
 	var runAsUser int64 = 1000
 	var runAsGroup int64 = 1000
 	var fsGroup int64 = 1000
 	var securityContext = corev1.PodSecurityContext{
-		RunAsNonRoot: &runAsNonRoot,
-		RunAsUser:    &runAsUser,
-		RunAsGroup:   &runAsGroup,
-		FSGroup:      &fsGroup,
+		AllowPrivilegeEscalation: &allowPrivilegeEscalation,
+		RunAsNonRoot:             &runAsNonRoot,
+		RunAsUser:                &runAsUser,
+		RunAsGroup:               &runAsGroup,
+		FSGroup:                  &fsGroup,
 	}
 
 	if pool != nil && pool.SecurityContext != nil {
